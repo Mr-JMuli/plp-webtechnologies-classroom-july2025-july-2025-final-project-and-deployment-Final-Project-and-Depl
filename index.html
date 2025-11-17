@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Greenwood Academy</title>
-  <link rel="icon" href="images/logo.jpg" />
+  <link rel="icon" href="images/logo.webp" />
   <style>
     *{margin:0;padding:0;box-sizing:border-box}body{font:16px/1.6 system-ui,sans-serif;color:#251605}.container{max-width:1200px;margin:auto;padding:0 1rem}.header{background:#251605;color:#f6e27f;position:sticky;top:0;z-index:10}.header .container{display:flex;justify-content:space-between;align-items:center;padding:1rem}.logo img{height:48px}.nav-list{display:flex;gap:1.5rem;list-style:none}.nav-list a{color:#f6e27f;font-weight:600}.hamburger{display:none;font-size:1.8rem;cursor:pointer}@media(max-width:768px){.hamburger{display:block}.nav-list{position:fixed;top:68px;left:-100%;background:#251605;width:100%;flex-direction:column;padding:1rem 0;transition:left .3s}.nav-list.active{left:0}}
   </style>
@@ -14,7 +14,7 @@
 <body>
   <header class="header">
     <div class="container">
-      <a href="index.html" class="logo"><img src="images/logo.jpg" alt="Logo" loading="lazy"></a>
+      <a href="index.html" class="logo"><img src="images/logo.webp" alt="Logo" loading="lazy"></a>
       <nav class="nav">
         <ul class="nav-list">
           <li><a href="index.html" class="active">Home</a></li>
@@ -22,19 +22,21 @@
           <li><a href="academics.html">Academics</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
-        <div class="hamburger">Menu</div>
+        <div class="hamburger">☰</div>
       </nav>
     </div>
   </header>
 
   <section class="hero">
-    <img src="images/slider1.jpg" alt="Students" class="slide active" loading="lazy">
-    <img src="images/slider2.jpg" alt="Lab" class="slide" loading="lazy">
-    <img src="images/slider3.jpg" alt="Sports" class="slide" loading="lazy">
-    <button class="prev">Previous</button><button class="next">Next</button>
+    <div class="slider">
+      <img src="images/slider1.webp" alt="Students learning" class="slide active" loading="lazy">
+      <img src="images/slider2.webp" alt="Science lab" class="slide" loading="lazy">
+      <img src="images/slider3.webp" alt="Sports day" class="slide" loading="lazy">
+      <!-- Buttons removed for clean design -->
+    </div>
     <div class="hero-text">
-      <h1>Greenwood Academy</h1>
-      <p>Excellence in Education</p>
+      <h1>Welcome to Greenwood Academy</h1>
+      <p>Excellence in Education Since 1990</p>
       <a href="about.html" class="btn">Learn More</a>
     </div>
   </section>

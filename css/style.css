@@ -13,26 +13,29 @@ a{color:inherit;text-decoration:none}
 .nav-list a:hover,.nav-list a.active{color:#e2c391}
 .hamburger{display:none;font-size:1.8rem;cursor:pointer}
 
-/* Hero */
-.hero{position:relative;height:70vh;overflow:hidden}
-.slide{position:absolute;inset:0;object-fit:cover;opacity:0;transition:opacity .8s}
+/* Hero – FIXED: Full height, larger text, no buttons */
+.hero{position:relative;height:100vh;overflow:hidden;background:#f0f0f0} /* Full viewport */
+.slider{position:relative;width:100%;height:100%}
+.slide{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .8s ease-in-out}
 .slide.active{opacity:1}
-.prev,.next{position:absolute;top:50%;transform:translateY(-50%);background:rgba(37,22,5,.6);color:#f6e27f;border:none;padding:.8rem;font-size:1.4rem;cursor:pointer}
-.prev{left:1rem}.next{right:1rem}
-.hero-text{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);text-align:center;color:#251605;background:rgba(246,226,127,.9);padding:1rem 2rem;border-radius:8px}
-.hero-text h1{font-size:2.2rem;margin-bottom:.3rem}
-.btn{display:inline-block;background:#9bbec7;color:#251605;padding:.7rem 1.4rem;border-radius:5px;margin-top:.8rem;font-weight:600}
+/* Hide prev/next buttons completely */
+.prev,.next{display:none} /* Removed for clean look – auto-slide only */
+/* .prev,.next{position:absolute;top:50%;transform:translateY(-50%);background:rgba(37,22,5,.6);color:#f6e27f;border:none;padding:.8rem;font-size:1.4rem;cursor:pointer;z-index:5} */ /* Uncomment if you want them back */
+.hero-text{position:absolute;bottom:3rem;left:50%;transform:translateX(-50%);text-align:center;color:#251605;background:rgba(246,226,127,.95);padding:2rem;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,.2);max-width:90%}
+.hero-text h1{font-size:3.5rem;margin-bottom:.5rem;font-weight:700;line-height:1.2} /* Larger & bolder */
+.hero-text p{font-size:1.4rem;margin-bottom:1rem} /* Bigger subtitle */
+.btn{display:inline-block;background:#9bbec7;color:#251605;padding:1rem 2rem;border-radius:8px;margin-top:1rem;font-weight:600;font-size:1.1rem;transition:background .3s}
 .btn:hover{background:#a8b7ab}
 
 /* Features */
 .features{display:grid;gap:1.5rem;padding:3rem 0;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
 .feature{background:#f6e27f;padding:1.5rem;border-radius:8px;text-align:center}
-.feature h3{color:#251605}
+.feature h3{color:#251605;font-size:1.3rem;margin-bottom:.5rem}
 
 /* Page */
 .page{padding:3rem 0;min-height:60vh}
-.page h1{color:#251605;margin-bottom:1rem}
-.about-img{border-radius:10px;margin:1.5rem 0;box-shadow:0 4px 10px rgba(0,0,0,.1)}
+.page h1{color:#251605;margin-bottom:1rem;font-size:2.5rem}
+.about-img{border-radius:10px;margin:1.5rem 0;box-shadow:0 4px 10px rgba(0,0,0,.1);width:100%}
 .programs{display:grid;gap:1.2rem;margin-top:1.5rem}
 .program{background:#e2c391;padding:1.3rem;border-radius:8px}
 
@@ -47,10 +50,20 @@ input:focus,textarea:focus{outline:2px solid #9bbec7;border-color:#9bbec7}
 /* Footer */
 .footer{background:#251605;color:#f6e27f;text-align:center;padding:1.8rem 0;margin-top:3rem}
 
-/* Responsive */
+/* Responsive – FIXED: Larger mobile text */
 @media(max-width:768px){
   .hamburger{display:block}
   .nav-list{position:fixed;top:68px;left:-100%;background:#251605;width:100%;flex-direction:column;padding:1rem 0;transition:left .3s}
   .nav-list.active{left:0}
-  .hero-text h1{font-size:1.8rem}
+  .hero{height:100vh} /* Ensure full height on mobile */
+  .hero-text{bottom:2rem;padding:1.5rem;max-width:95%;background:rgba(246,226,127,1)} /* Full opacity on mobile */
+  .hero-text h1{font-size:2.5rem} /* Bigger on phone */
+  .hero-text p{font-size:1.2rem}
+  .btn{padding:.9rem 1.5rem;font-size:1rem}
+  .page h1{font-size:2rem}
+  .features{padding:2rem 0}
+}
+@media(max-width:480px){
+  .hero-text h1{font-size:2rem} /* Even smaller screens */
+  .hero-text p{font-size:1.1rem}
 }
