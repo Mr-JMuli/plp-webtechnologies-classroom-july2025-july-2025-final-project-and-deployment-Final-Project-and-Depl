@@ -1,22 +1,9 @@
-# Greenwood Academy
+# Greenwood Academy - Final Project
 
-A lightweight, responsive school website built with HTML5, CSS3, and JavaScript.
-
-## Live URL
-[https://yourusername.github.io/greenwood-academy](https://yourusername.github.io/greenwood-academy)
+## Live Site
+https://mr-JMuli.github.io/plp-webtechnologies-classroom-july2025-july-2025-final-project-and-deployment-Final-Project-and-Depl
 
 ## Features
-- 4 Pages: Home, About, Academics, Contact
-- Mobile-first + Hamburger menu
-- Image slider + Form validation
-- < 115 KB total load
-- 100/100 Lighthouse
-
-## Palette
-- `#251605` (Deep Brown)
-- `#f6e27f` (Lemon Chiffon)
-- `#e2c391` (Wheat)
-- `#a8b7ab` (Sage Green)
-- `#9bbec7` (Sky Blue)
-
-Built: November 16, 2025 | Kenya
+- 4 Responsive Pages with Hamburger Menu
+- Image Slider & Form Validation
+- Optimized: <115 KB, 100/100 Lighthouse
